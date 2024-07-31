@@ -3344,7 +3344,7 @@ footer h4 {
 
 .footer_blog {
 	float: left;
-	width: 65%;
+	/* width: 65%; */
 	padding: 75px 75px 100px 75px;
 }
 
@@ -3373,15 +3373,15 @@ footer h2::after {
 }
 
 footer p {
-	color: #666;
-	font-size: 14px;
+	color: aliceblue;
+	font-size: 18px;
 	line-height: 24px;
 	font-weight: 500;
 }
 
 footer p a {
-	color: #666;
-	font-size: 14px;
+	color:aliceblue;
+	font-size: 18px;
 	line-height: 24px;
 	font-weight: 500;
 }
@@ -3391,8 +3391,8 @@ footer p a {
 }
 
 .footer-menu li a {
-	color: #666;
-	font-size: 14px;
+	color: aliceblue;
+	font-size: 18px;
 	line-height: 24px;
 	font-weight: 500;
 }
@@ -3405,9 +3405,9 @@ footer ul.social_icons li a {
 	float: left;
 	margin-right: 15px;
 	text-align: center;
-	font-size: 18px;
+	font-size: 20px;
 	border-radius: 100%;
-	color: #666;
+	color: aliceblue;
 }
 
 footer ul.social_icons {
@@ -3452,7 +3452,7 @@ footer ul.social_icons {
 	height: auto;
 	left: 0;
 	padding: 18px 0;
-	padding-left: 35%;
+	
 }
 
 .cprt p {
@@ -3612,7 +3612,7 @@ footer ul.social_icons {
 
 .map_section {
 	float: right;
-	width: 35%;
+	width: 100%;
 }
 
 #map {
