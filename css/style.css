@@ -797,7 +797,7 @@ hr.dottad_border {
 .bg_load {
 	float: left;
 	position: fixed;
-	width: 100%;
+	width:100%;
 	text-align: center;
 	height: 100%;
 	z-index: 999;
@@ -829,6 +829,8 @@ hr.dottad_border {
 	-o-animation-duration: 2s;
 	-o-animation-iteration-count: infinite;
 	-o-animation-timing-function: linear;
+	height: 150px;
+	width: 150px;
 }
 
 @-webkit-keyframes rotatey {
