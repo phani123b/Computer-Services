@@ -192,27 +192,27 @@
               <h4>GET IN TOUCH</h4>
               <p>Our goal is to provide the best customer service and to answer all of your questions in a timely manner.</p>
               <div class="form_section">
-                <form class="form_contant" action="index.html">
-                  <fieldset>
+                <form id="contactForm" class="form_contant">
+      
                   <div class="row">
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Website URL" type="text" required />
+                      <input id="url" class="field_custom" placeholder="Website URL" type="text" required />
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Your name" type="text" required />
+                      <input id="name" class="field_custom" placeholder="Your name" type="text" required />
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Email adress" type="email" required />
+                      <input id="email" class="field_custom" placeholder="Email adress" type="email" required />
                     </div>
                     <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                      <input class="field_custom" placeholder="Phone number" type="text" required />
+                      <input id="mobile" class="field_custom" placeholder="Phone number" type="text" required />
                     </div>
                     <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                      <textarea class="field_custom" placeholder="Messager" required ></textarea>
+                      <textarea id="message" class="field_custom" placeholder="Messager" required ></textarea>
                     </div>
-                    <div class="center"><a class="btn main_bt" href="#">SUBMIT NOW</a></div>
+                    <div class="center"><button type="submit" class="btn main_bt" href="#">SUBMIT NOW</button></div>
                   </div>
-                  </fieldset>
+                
                 </form>
               </div>
             </div>
@@ -419,6 +419,34 @@
 <script src="js/wow.js"></script>
 <!-- custom js -->
 <script src="js/custom.js"></script>
+
+<!-- contact form -->
+ <script>
+
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+                
+                // Get form data
+                var formData = new FormData(this);
+                var url = document.getElementById("url").value;
+                var name = document.getElementById("name").value;
+                var mobile = document.getElementById("mobile").value;
+                var email = document.getElementById("email").value;
+                var message = document.getElementById("message").value;;
+
+                
+                // Format message for WhatsApp
+                var whatsappMessage = "Hello, this is " + name + "\n" + "Mobile no: " + mobile + "\nEmail : " + email + "\nMy message is: " + message + "\nwebsite: " + url;
+                
+                // Encode message for URL
+                var encodedMessage = encodeURIComponent(whatsappMessage);
+                
+                // Open WhatsApp with the message
+                window.open("https://wa.me/9398910016?text=" + encodedMessage, "_blank");
+            });
+
+ </script>
+
 <script>
 
       // This example adds a marker to indicate the position of Bondi Beach in Sydney,
