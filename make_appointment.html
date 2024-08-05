@@ -166,31 +166,30 @@
               </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 appointment_form">
-              <div class="form_section">
-                <form class="form_contant" action="index.html">
-                  <fieldset class="row">
+              <div id="appointmentForm" class="form_section">
+                <form class="form_contant row">
                   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="First Name*" type="text" required>
+                    <input id="firstName" class="field_custom" placeholder="First Name*" type="text" required>
                   </div>
                   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Last Name" type="text" required>
+                    <input id="lastName" class="field_custom" placeholder="Last Name" type="text" required>
                   </div>
                   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Your Email" type="email" required>
+                    <input id="email" class="field_custom" placeholder="Your Email" type="email" required>
                   </div>
                   <div class="field col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Your Phone Number" type="text" required>
+                    <input id="mobile" class="field_custom" placeholder="Your Phone Number" type="text" required>
                   </div>
                   <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <input class="field_custom" placeholder="Subject" type="text" required>
+                    <input id="subject" class="field_custom" placeholder="Subject" type="text" required>
                   </div>
                   <div class="field col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <textarea class="field_custom" placeholder="Description" required></textarea>
+                    <textarea id="description" class="field_custom" placeholder="Description" required></textarea>
                   </div>
                   <div class="center">
-                    <button class="btn main_bt">SUBMIT NOW</button>
+                    <button type="submit" class="btn main_bt">SUBMIT NOW</button>
                   </div>
-                  </fieldset>
+                
                 </form>
               </div>
             </div>
@@ -397,6 +396,37 @@
 <script src="js/wow.js"></script>
 <!-- custom js -->
 <script src="js/custom.js"></script>
+<!-- Appointment Form -->
+
+<script>
+
+  document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  
+  // Get form data
+  var first_name = document.getElementById("firstName").value;
+  var last_name = document.getElementById("lastName").value;
+  var mobile = document.getElementById("mobile").value;
+  var email = document.getElementById("email").value;
+  var description = document.getElementById("description").value;
+  var subject = document.getElementById("subject").value;
+
+  console.log(first_name);
+
+
+  
+  // Format message for WhatsApp
+  var whatsappMessage = "Hello, this is " + first_name + last_name + "\n" + "Mobile no: " + mobile + "\nEmail : " + email + "\nSubject: " + subject + "\nDescription: " + description;
+  
+  // Encode message for URL
+  var encodedMessage = encodeURIComponent(whatsappMessage);
+  
+  // Open WhatsApp with the message
+  window.open("https://wa.me/9398910016?text=" + encodedMessage, "_blank");
+});
+
+</script>
+
 <script>
 
       // This example adds a marker to indicate the position of Bondi Beach in Sydney,
