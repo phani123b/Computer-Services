@@ -3491,19 +3491,19 @@ footer ul.social_icons {
 
 .gross_layout::after {
 	position: absolute;
-	background: url(../images/it_service/dark_bg_img.png);
+	background: url(../images/it_service/dark_bg_img.jpg);
 	width: 35%;
 	height: 100%;
 	right: 0;
 	content: "";
 	top: 0;
 	background-size: cover;
-	background-position: right;
+	background-position: center;
 }
 
 .gross_layout::before {
 	position: absolute;
-	background: rgba(10, 139, 199, 0.8);
+	background: rgb(10 139 199 / 28%);
 	width: 35%;
 	height: 100%;
 	right: 0;
@@ -3516,19 +3516,19 @@ footer ul.social_icons {
 
 .gross_layout.right_gross_layout::after {
 	position: absolute;
-	background: url(../images/it_service/dark_bg_img2.png);
+	background: url(../images/it_service/dark_bg_img2.jpg);
 	width: 35%;
 	height: 100%;
 	left: 0;
 	content: "";
 	top: 0;
 	background-size: cover;
-	background-position: right;
+	background-position: center;
 }
 
 .gross_layout.right_gross_layout::before {
 	position: absolute;
-	background: rgba(10, 139, 199, 0.8);
+	background:rgb(10 139 199 / 28%);
 	width: 35%;
 	height: 100%;
 	left: 0;
